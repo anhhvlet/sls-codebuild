@@ -3,15 +3,11 @@ phases:
   install:
     commands:
       - npm install
-      - npm install -g mocha
       - npm install -g serverless
+      - npm install  serverless-offline
   build:
     commands:
-      - serverless deploy 
+      - serverless deploy
   post_build:
     commands:
       - echo build complete
-artifacts:
-  type: zip
-  files:
-    - serverless.yml
